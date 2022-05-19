@@ -1,0 +1,102 @@
+<%= form_with(model: gnomeparcel) do |form| %>
+  <% if gnomeparcel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gnomeparcel.errors.count, "error") %> prohibited this gnomeparcel from being saved:</h2>
+
+      <ul>
+        <% gnomeparcel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :landaddress %>
+    <%= form.text_area :landaddress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :open_to_visitors %>
+    <%= form.check_box :open_to_visitors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :open_to_new_members %>
+    <%= form.check_box :open_to_new_members %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latlong %>
+    <%= form.text_field :latlong %>
+  </div>
+
+  <div class="field">
+    <%= form.label :waterbodies %>
+    <%= form.number_field :waterbodies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maps %>
+    <%= form.text_area :maps %>
+  </div>
+
+  <div class="field">
+    <%= form.label :population %>
+    <%= form.number_field :population %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maxcapacity %>
+    <%= form.number_field :maxcapacity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vision %>
+    <%= form.text_area :vision %>
+  </div>
+
+  <div class="field">
+    <%= form.label :landhookups %>
+    <%= form.number_field :landhookups %>
+  </div>
+
+  <div class="field">
+    <%= form.label :roadaccess %>
+    <%= form.check_box :roadaccess %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seasonalhazards %>
+    <%= form.text_field :seasonalhazards %>
+  </div>
+
+  <div class="field">
+    <%= form.label :water %>
+    <%= form.check_box :water %>
+  </div>
+
+  <div class="field">
+    <%= form.label :electric %>
+    <%= form.check_box :electric %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sewage %>
+    <%= form.check_box :sewage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wifi %>
+    <%= form.check_box :wifi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

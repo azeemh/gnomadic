@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  landaddress: MyText
+  open_to_visitors: false
+  open_to_new_members: false
+  latlong: MyString
+  waterbodies: 1
+  maps: MyText
+  population: 1
+  maxcapacity: 1
+  vision: MyText
+  landhookups: 1
+  roadaccess: false
+  seasonalhazards: MyString
+  water: false
+  electric: false
+  sewage: false
+  wifi: false
+  user: one
+
+two:
+  landaddress: MyText
+  open_to_visitors: false
+  open_to_new_members: false
+  latlong: MyString
+  waterbodies: 1
+  maps: MyText
+  population: 1
+  maxcapacity: 1
+  vision: MyText
+  landhookups: 1
+  roadaccess: false
+  seasonalhazards: MyString
+  water: false
+  electric: false
+  sewage: false
+  wifi: false
+  user: two

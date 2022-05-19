@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gnomeparcels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Landaddress</th>
+      <th>Open to visitors</th>
+      <th>Open to new members</th>
+      <th>Latlong</th>
+      <th>Waterbodies</th>
+      <th>Maps</th>
+      <th>Population</th>
+      <th>Maxcapacity</th>
+      <th>Vision</th>
+      <th>Landhookups</th>
+      <th>Roadaccess</th>
+      <th>Seasonalhazards</th>
+      <th>Water</th>
+      <th>Electric</th>
+      <th>Sewage</th>
+      <th>Wifi</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gnomeparcels.each do |gnomeparcel| %>
+      <tr>
+        <td><%= gnomeparcel.landaddress %></td>
+        <td><%= gnomeparcel.open_to_visitors %></td>
+        <td><%= gnomeparcel.open_to_new_members %></td>
+        <td><%= gnomeparcel.latlong %></td>
+        <td><%= gnomeparcel.waterbodies %></td>
+        <td><%= gnomeparcel.maps %></td>
+        <td><%= gnomeparcel.population %></td>
+        <td><%= gnomeparcel.maxcapacity %></td>
+        <td><%= gnomeparcel.vision %></td>
+        <td><%= gnomeparcel.landhookups %></td>
+        <td><%= gnomeparcel.roadaccess %></td>
+        <td><%= gnomeparcel.seasonalhazards %></td>
+        <td><%= gnomeparcel.water %></td>
+        <td><%= gnomeparcel.electric %></td>
+        <td><%= gnomeparcel.sewage %></td>
+        <td><%= gnomeparcel.wifi %></td>
+        <td><%= gnomeparcel.user_id %></td>
+        <td><%= link_to 'Show', gnomeparcel %></td>
+        <td><%= link_to 'Edit', edit_gnomeparcel_path(gnomeparcel) %></td>
+        <td><%= link_to 'Destroy', gnomeparcel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gnomeparcel', new_gnomeparcel_path %>

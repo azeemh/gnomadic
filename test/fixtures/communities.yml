@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mission: MyText
+  calendar: MyText
+  gnomeparcel: one
+
+two:
+  name: MyString
+  mission: MyText
+  calendar: MyText
+  gnomeparcel: two

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  starttime: 2022-05-19 03:45:53
+  endtime: 2022-05-19 03:45:53
+  community: one
+
+two:
+  name: MyString
+  starttime: 2022-05-19 03:45:53
+  endtime: 2022-05-19 03:45:53
+  community: two

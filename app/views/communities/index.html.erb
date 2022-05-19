@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Communities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mission</th>
+      <th>Calendar</th>
+      <th>Gnomeparcel</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @communities.each do |community| %>
+      <tr>
+        <td><%= community.name %></td>
+        <td><%= community.mission %></td>
+        <td><%= community.calendar %></td>
+        <td><%= community.gnomeparcel_id %></td>
+        <td><%= link_to 'Show', community %></td>
+        <td><%= link_to 'Edit', edit_community_path(community) %></td>
+        <td><%= link_to 'Destroy', community, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Community', new_community_path %>

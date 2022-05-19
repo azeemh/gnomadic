@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @community.name %>
+</p>
+
+<p>
+  <strong>Mission:</strong>
+  <%= @community.mission %>
+</p>
+
+<p>
+  <strong>Calendar:</strong>
+  <%= @community.calendar %>
+</p>
+
+<p>
+  <strong>Gnomeparcel:</strong>
+  <%= @community.gnomeparcel_id %>
+</p>
+
+<%= link_to 'Edit', edit_community_path(@community) %> |
+<%= link_to 'Back', communities_path %>
