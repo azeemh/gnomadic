@@ -21,7 +21,7 @@ name:string description:text community:references
 
 ## Roadmap
 #### Navigation Menu
-#### IPFS & active storage accounts
+#### IPFS active storage integration for web 3 file storage
 #### Figure out Gnomadic Infrastructure (Web & Physical), Crypto and Payments.
 #### Front End
 #### GAIA API standardization 
