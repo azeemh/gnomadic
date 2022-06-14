@@ -13,6 +13,41 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pronouns %><br />
+    <%= f.text_field :pronouns %>
+  </div>
+
+  <div class="field">
+    <%= f.label :has_land %><br />
+    <%= f.check_box :has_land %>
+  </div>
+
+  <div class="field">
+    <%= f.label :acreage %><br />
+    <%= f.number_field :acreage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :footage %><br />
+    <%= f.number_field :footage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :open_spaces %><br />
+    <%= f.number_field :open_spaces %>
+  </div>
+
+  <div class="field">
+    <%= f.label :land_description %><br />
+    <%= f.text_area :land_description %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
