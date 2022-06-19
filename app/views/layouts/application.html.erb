@@ -23,6 +23,22 @@
           <% if user_signed_in? %>
 
           <li class="nav-item">
+            <a class="nav-link" href="/gnomeparcels">Gnomeparcels</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/events">Events</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/communities">Communities</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/roles">Roles</a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link " href="<%= edit_registration_path(current_user) %>">⚙️</a>
           </li>
 
