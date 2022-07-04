@@ -1,7 +1,6 @@
 class GnomeparcelsController < ApplicationController
   before_action :set_gnomeparcel, only: %i[ show edit update destroy ]
   before_action :owner, only: %i[ edit update destroy ]
-
   before_action :landcheck, only: %i[ new ]
 
   def landcheck
