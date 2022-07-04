@@ -27,11 +27,11 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/events">Events</a>
+            <a class="nav-link" href="/communities">Communities</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/communities">Communities</a>
+            <a class="nav-link" href="/events">Events</a>
           </li>
 
           <li class="nav-item">
@@ -39,7 +39,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="<%= edit_registration_path(current_user) %>">⚙️</a>
+            <a class="nav-link " href="<%= edit_registration_path(current_user) %>"><%= unless current_user.nil? || current_user.name.nil? then current_user.name.to_s else "👤" end %></a>
           </li>
 
           <li class="nav-item">
@@ -82,8 +82,12 @@
     </div>
   </nav>
 
+
+
   <body>
     <div id="appcontent">
+      <p id="notice"><%= notice %></p>
+      <p id="alert"><%= alert %></p>
       <%= yield %>
     </div>
   </body>

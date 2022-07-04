@@ -1,5 +1,16 @@
 class CommunitiesController < ApplicationController
   before_action :set_community, only: %i[ show edit update destroy ]
+  before_action :owner, only: %i[ edit update destroy ]
+
+  def owner
+    #pending update because this currently is just a clone of owner from gnomeparcels
+    #update should check if current user is a member of the community instead of the one who created the record/admin... 
+    #add nuance to each action authorization but for now to make sure people don't delete other ppls ish just using this
+    unless @community.user == current_user
+      flash[:alert] = 'Not Your Community.'
+      redirect_back(fallback_location: root_path)
+    end 
+  end
 
   # GET /communities or /communities.json
   def index

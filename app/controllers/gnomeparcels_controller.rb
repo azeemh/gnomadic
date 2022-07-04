@@ -1,5 +1,26 @@
 class GnomeparcelsController < ApplicationController
   before_action :set_gnomeparcel, only: %i[ show edit update destroy ]
+  before_action :owner, only: %i[ edit update destroy ]
+
+  before_action :landcheck, only: %i[ new ]
+
+  def landcheck
+    unless current_user.has_land?
+      flash[:notice] = 'You need land in order to create a new Gnomeparcel.'
+      redirect_back(fallback_location: root_path)
+    end 
+  end
+
+  def owner
+    unless @gnomeparcel.user == current_user
+      flash[:alert] = 'Not Your Land.'
+      redirect_back(fallback_location: root_path)
+    end 
+  end
+
+
+
+
 
   # GET /gnomeparcels or /gnomeparcels.json
   def index
@@ -22,6 +43,7 @@ class GnomeparcelsController < ApplicationController
   # POST /gnomeparcels or /gnomeparcels.json
   def create
     @gnomeparcel = Gnomeparcel.new(gnomeparcel_params)
+    @gnomeparcel.user = current_user
 
     respond_to do |format|
       if @gnomeparcel.save

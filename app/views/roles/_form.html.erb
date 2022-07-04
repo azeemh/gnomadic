@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :community_id %>
-    <%= form.text_field :community_id %>
+    <%= form.collection_select :community_id, Community.order(:name),:id,:name %>
   </div>
 
   <div class="actions">

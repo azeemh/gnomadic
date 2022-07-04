@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :gnomeparcel_id %>
-    <%= form.text_field :gnomeparcel_id %>
+    <%= form.collection_select :gnomeparcel_id, Gnomeparcel.order(:landaddress),:id,:landaddress %>
   </div>
 
   <div class="actions">
