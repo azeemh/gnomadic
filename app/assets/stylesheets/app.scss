@@ -19,3 +19,70 @@ input, textarea {
 #alert {
   color: crimson;
 }
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.countdownclock {
+	.container {
+	  color: #333;
+	  margin: 0 auto;
+	  text-align: center;
+	}
+
+	h1 {
+	  font-weight: normal;
+	  letter-spacing: .125rem;
+	  text-transform: uppercase;
+	}
+
+	li {
+	  display: inline-block;
+	  font-size: 1.5em;
+	  list-style-type: none;
+	  padding: 1em;
+	  text-transform: uppercase;
+	}
+
+	li span {
+	  display: block;
+	  font-size: 1.5rem;
+	}
+
+	.emoji {
+	  display: none;
+	  padding: 1rem;
+	}
+
+	.emoji span {
+	  font-size: 4rem;
+	  padding: 0 .5rem;
+	}
+
+	@media all and (max-width: 768px) {
+	  h1 {
+	    font-size: calc(1.5rem * var(--smaller));
+	  }
+	  
+	  li {
+	    font-size: calc(1.125rem * var(--smaller));
+	  }
+	  
+	  li span {
+	    font-size: calc(3.375rem * var(--smaller));
+	  }
+	}
+}
+
+.splashpagesignupform {
+	text-align: center;
+
+	a {
+		//change the font and whatever of the sign up link
+	}
+
+}
