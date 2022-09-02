@@ -20,12 +20,6 @@ input, textarea {
   color: crimson;
 }
 
-.center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
 
 .countdownclock {
 	position: fixed;
@@ -70,20 +64,6 @@ input, textarea {
 	.emoji span {
 	  font-size: 4rem;
 	  padding: 0 .5rem;
-	}
-
-	@media all and (max-width: 768px) {
-	  h1 {
-	    font-size: calc(1.5rem * var(--smaller));
-	  }
-	  
-	  li {
-	    font-size: calc(1.125rem * var(--smaller));
-	  }
-	  
-	  li span {
-	    font-size: calc(3.375rem * var(--smaller));
-	  }
 	}
 }
 
